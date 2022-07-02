@@ -10,7 +10,7 @@ public class Example2plus {
 
 //    public class Main {
 
-        private static int IMAX = 10000; // отключенное состояние
+        private static int IMAX = 10000; // Maximum value
         public static int[][] adjMat ={
                 {IMAX,1,3,IMAX},
                 {1,IMAX,1,4},
@@ -30,8 +30,8 @@ public class Example2plus {
             boolean []isVisted = new boolean[martix.length];
             int []d = new int[martix.length];
             for (int i = 0;i<martix.length;i++){
-                isVisted [i] = false; // Считается ли точка, можно понимать как оценку того, была ли точка добавлена ​​в набор B
-                d [i] = IMAX; // Кратчайший путь от начальной точки до этой точки среди путей, которые текущий набор B может соединить
+                isVisted [i] = false; // Point visited
+                d [i] = IMAX; // The shortest path from the starting point to this point among the paths that the current set can connect
             }
             isVisted[start] = true;
             d[start] = 0;
@@ -39,7 +39,7 @@ public class Example2plus {
             int index = start;
             while (unVisitNode > 0 && !isVisted[terminal] ){
                 int min = IMAX;
-                // Выбираем точку с кратчайшим путем от точки в множестве A до множества B
+                // Choose a point with the shortest path from a point in set A to set B
                 for (int i = 0;i<d.length;i++){
                     if (min > d[i] && !isVisted[i]){
                         index = i;
@@ -49,7 +49,7 @@ public class Example2plus {
 
 
                 for (int i = 0;i<martix.length;i++){
-                    if (d [index] + martix [index] [i] <d [i]) // Обновляем текущий кратчайший путь
+                    if (d [index] + martix [index] [i] <d [i]) // Update current shortest path
                         d[i] = d[index] + martix[index][i];
                 }
 

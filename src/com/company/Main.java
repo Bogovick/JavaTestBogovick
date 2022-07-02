@@ -13,7 +13,7 @@ public class Main {
         do {
         System.out.println("Select example (1, 2, 3) = ");
         int сhoice = in.nextInt();
-        switch (сhoice){
+        switch (сhoice){//Selecting an example
             case 1:
                 Example1.Ex1();
                 break;
