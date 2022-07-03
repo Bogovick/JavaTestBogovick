@@ -20,8 +20,11 @@ public class Example2plus {
 
        // public static void main(String[] args) {
        public static void Ex2() {
+           System.out.println("Start = 1 ---- Finish = 4 ==== Shortest path = ");
            Dijkstra(adjMat, 0, 3);//The first city is counted from 0, the last n-1
+           System.out.println("Start = 2 ---- Finish = 4 ==== Shortest path = ");
            Dijkstra(adjMat, 1, 3);
+
        }
         //}
 
